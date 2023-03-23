@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- context schemas-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        
+<bean id="c1" class="objectsInjection.Charger">
+<property name="brand" value="samsung"></property>
+<property name="voltage" value="64"></property>
+<property name="type" value="type c"></property>
+<!--<property name="simtype" value="post"></property>
+<property name="company" value="jio"></property>-->
+	
+	
+</bean>	
+<bean id="c2" class="objectsInjection.Cellphone">
+	<property name="charger" ref="c1"></property>
+</bean>
+</beans>       
